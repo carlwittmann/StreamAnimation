@@ -5,7 +5,7 @@ var polylineGroup = L.layerGroup(); // create a new layer group
 var loadedPolylines = []; // keep track of loaded polylines
 
 function setup() {
-  map = L.map('mapid').setView([49.41997, -123.05016], 11);
+  map = L.map('mapid').setView([49.43687, -123.05016], 11);
 
   L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
