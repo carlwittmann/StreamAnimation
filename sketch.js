@@ -5,7 +5,7 @@ var polylineGroup = L.layerGroup(); // create a new layer group
 var loadedPolylines = []; // keep track of loaded polylines
 
 function setup() {
-  map = L.map('mapid').setView([49.41997, -123.05016], 13);
+  map = L.map('mapid').setView([49.41997, -123.05016], 11);
 
   L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
@@ -20,32 +20,9 @@ function loadGeoJSON() {
     // create a new polyline from the loaded data
     var polyline = L.geoJSON(data, {
       style: function(feature) {
-        var weight;
-        switch (feature.properties.STRMDR) {
-          case 1:
-            weight = 0.5;
-            break;
-          case 2:
-            weight = 0.75;
-            break;
-          case 3:
-            weight = 1;
-            break;
-          case 4:
-            weight = 1.25;
-            break;
-          case 5:
-            weight = 1.5;
-            break;
-          case 6:
-            weight = 1.75;
-            break;
-          default:
-            weight = 1;
-        }
         return {
-          weight: weight,
-          color: '#000'
+          weight: 1,
+          color: '#0099ff'
         };
       }
     });
